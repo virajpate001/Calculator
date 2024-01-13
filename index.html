@@ -1,54 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="calculator"> 
-    <div class="innervalue">
-        <input id="fresult" class="display-box" type="text"  disabled>
-    </div>
-    <div class="upper-sec">
-        <div class="row">
-        <button onclick="clearonebyone()"><-</button>
-        <button  onclick="display('%')">%</button>
-        <button class="clearbtn" onclick="clearScreen()">Clear</button>
-        <button onclick="display('/')">/</button>
-        </div>
-    </div>
-    <div class="mid-sec">
-        <div class="row">
-        <button value="7" onclick="display('7')">7</button>
-        <button value="8" onclick="display('8')">8</button>
-        <button value="9" onclick="display('9')">9</button>
-        <button value="" onclick="display('')">*</button>
-        </div>
-        <div class="row">
-        <button value="4" onclick="display('4')">4</button>
-        <button value="5" onclick="display('5')">5</button>
-        <button value="6" onclick="display('6')">6</button>
-        <button value="-" onclick="display('-')">-</button>
-        </div>
-        <div class="row">
-        <button value="1" onclick="display('1')">1</button>
-        <button value="2" onclick="display('2')">2</button>
-        <button value="3" onclick="display('3')">3</button>
-        <button value="+" onclick="display('+')">+</button>
-        </div>
-    </div>
-    <div class="bottom-sec">
-        <div class="row">
-        <button value="00" onclick="display('00')">00</button>
-        <button value="0" onclick="display('0')">0</button>
-        <button value="." onclick="display('.')">.</button>
-        <button value="=" onclick="calculate()">=</button>
-        </div>
-    </div>
-</div>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
-<script src="main.js"></script>
+</head>
+
+<body>
+    <div id="calculate">
+        <div class="calInner">
+            <div class="innerValue">
+                <input id="resultArea" class="display-box" type="text" placeholder="0" value="" disabled>
+            </div>
+
+            <div class="innerButtons">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td class="bg-light" onclick="clearScreen()">AC</td>
+                            <td class="bg-light" onclick="backspace()"><i class='bx bxs-tag-x'></i></td>
+                            <td class="primaricolor" onclick="display('/')">/</td>
+                            <td class="primaricolor" onclick="display('*')">*</td>
+                        </tr>
+                        <tr>
+                            <td class="bgbtn" onclick="display('7')">7</td>
+                            <td class="bgbtn" onclick="display('8')">8</td>
+                            <td class="bgbtn" onclick="display('9')">9</td>
+                            <td class="primaricolor" onclick="display('-')">-</td>
+                        </tr>
+                        <tr>
+                            <td class="bgbtn" onclick="display('4')">4</td>
+                            <td class="bgbtn" onclick="display('5')">5</td>
+                            <td class="bgbtn" onclick="display('6')">6</td>
+                            <td class="primaricolor" onclick="display('+')">+</td>
+                        </tr>
+                        <tr>
+                            <td class="bgbtn" onclick="display('1')">1</td>
+                            <td class="bgbtn" onclick="display('2')">2</td>
+                            <td class="bgbtn" onclick="display('3')">3</td>
+                            <td class="seccolor" rowspan="2" onclick="calculate()">=</td>
+                        </tr>
+                        <tr>
+                            <td class="bgbtn" colspan="2" onclick="display('0')">0</td>
+                            <td class="bgbtn" onclick="display('.')">.</td>
+
+
+                        </tr>
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <script src="main.js"></script>
 </body>
+
 </html>
